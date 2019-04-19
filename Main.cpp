@@ -92,3 +92,35 @@ void MENU :: main_menu(void)
 			break ;
 	}
 }
+void MENU :: edit_menu(void)
+{
+	char ch ;
+	while (1)
+	{
+		clrscr() ;
+		gotoxy(32,9) ;
+		cout <<"E D I T  M E N U";
+		gotoxy(32,10) ;
+		cout <<"~~~~~~~~~~~~~~~~" ;
+		gotoxy(34,13) ;
+		cout <<"1. BOOKS" ;
+		gotoxy(34,14) ;
+		cout <<"2. MEMBERS" ;
+		gotoxy(34,15) ;
+		cout <<"0. EXIT" ;
+		gotoxy(31,17) ;
+		cout <<"Enter your choice : " ;
+		ch = getche() ;
+		if (ch == 27)
+			break ;
+		else
+		if (ch =='1')
+			edit_book() ;
+		else
+		if (ch == '2')
+			edit_member() ;
+		else
+		if (ch == '0')
+			break ;
+	}
+}
