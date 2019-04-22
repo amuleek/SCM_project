@@ -3,6 +3,7 @@
 
 //	PROJECT BOOK LIBRARY
 
+
 #include <iostream.h>
 #include <fstream.h>
 #include <process.h>
@@ -14,7 +15,6 @@
 #include <dos.h>
 
 
-// THIS CLASS CONTROL ALL THE FUNCTIONS IN THE MENU
 
 
 class MENU
@@ -299,6 +299,51 @@ void MENU :: edit_menu(void)
 		else
 		if (ch == '2')
 			edit_member() ;
+		else
+		if (ch == '0')
+			break ;
+	}
+}
+
+
+//**********************************************************
+// FUNCTION TO DISPLAY EDIT MENU FOR BOOK & CONTROL
+// ALL THE FUNCTION IN THE EDIT MENU.
+//**********************************************************
+
+void MENU :: edit_book(void)
+{
+	char ch ;
+	while (1)
+	{
+		clrscr() ;
+		gotoxy(31,9) ;
+		cout <<"E D I T  B O O K S";
+		gotoxy(31,10) ;
+		cout <<"~~~~~~~~~~~~~~~~~~" ;
+		gotoxy(34,13) ;
+		cout <<"1. MODIFY" ;
+		gotoxy(34,14) ;
+		cout <<"2. DELETE" ;
+		gotoxy(34,15) ;
+		cout <<"0. EXIT" ;
+		gotoxy(31,17) ;
+		cout <<"Enter your choice : " ;
+		ch = getche() ;
+		if (ch == 27)
+			break ;
+		else
+		if (ch == '1')
+		{
+			WORKING W ;
+			W.modify_book() ;
+		}
+		else
+		if (ch == '2')
+		{
+			WORKING W ;
+			W.delete_book() ;
+		}
 		else
 		if (ch == '0')
 			break ;
