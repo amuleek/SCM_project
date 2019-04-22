@@ -1,4 +1,9 @@
 
+
+
+//	PROJECT BOOK LIBRARY
+
+
 #include <iostream.h>
 #include <fstream.h>
 #include <process.h>
@@ -10,9 +15,6 @@
 #include <dos.h>
 
 
-//**********************************************************
-// THIS CLASS CONTROL ALL THE FUNCTIONS IN THE MENU
-//**********************************************************
 
 
 class MENU
