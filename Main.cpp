@@ -349,3 +349,77 @@ void MENU :: edit_book(void)
 			break ;
 	}
 }
+
+void MENU :: edit_member(void)
+{
+	char ch ;
+	while (1)
+	{
+		clrscr() ;
+		gotoxy(29,9) ;
+		cout <<"E D I T  M E M B E R S";
+		gotoxy(29,10) ;
+		cout <<"~~~~~~~~~~~~~~~~~~~~~~" ;
+		gotoxy(34,13) ;
+		cout <<"1. MODIFY" ;
+		gotoxy(34,14) ;
+		cout <<"2. DELETE" ;
+		gotoxy(34,15) ;
+		cout <<"0. EXIT" ;
+		gotoxy(29,17) ;
+		cout <<"Enter your choice : " ;
+		ch = getche() ;
+		if (ch == 27)
+			break ;
+		else
+		if (ch == '1')
+		{
+			WORKING W ;
+			W.modify_member() ;
+		}
+		else
+		if (ch == '2')
+		{
+			WORKING W ;
+			W.delete_member() ;
+		}
+		else
+		if (ch == '0')
+			break ;
+	}
+}
+
+
+//**********************************************************
+// FUNCTION TO DISPLAY THE INTRODUCTION FOR THE PROJECT.
+//**********************************************************
+
+void MENU :: introduction(void)
+{
+	clrscr() ;
+	gotoxy(31,5) ;
+	cout <<"Welcome to Project" ;
+	textcolor(BLACK+BLINK) ; textbackground(WHITE) ;
+	gotoxy(33,7) ;
+	cprintf(" BOOK LIBRARY ") ;
+	textcolor(LIGHTGRAY) ; textbackground(BLACK) ;
+	gotoxy(15,10) ;
+	cout <<"This  project has facility of maintaining  records" ;
+	gotoxy(15,11) ;
+	cout <<"of BOOKS and MEMBERS." ;
+	gotoxy(15,13) ;
+	cout <<"This  project  can  hold more  than  10,000  books" ;
+	gotoxy(15,14) ;
+	cout <<"records." ;
+	gotoxy(15,16) ;
+	cout <<"One member can issue one book at a time. If he/she" ;
+	gotoxy(15,17) ;
+	cout <<"does  not return book upto 15 days he/she have  to" ;
+	gotoxy(15,18) ;
+	cout <<"pay fine of Rs.2/- per day." ;
+	textcolor(LIGHTGRAY+BLINK) ;
+	gotoxy(27,24) ;
+	cprintf("Press any key to continue") ;
+	textcolor(LIGHTGRAY) ;
+	getch() ;
+}
